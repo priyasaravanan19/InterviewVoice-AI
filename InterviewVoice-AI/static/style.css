@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #f5f7ff, #eef2ff);
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+
+/* Navbar */
+
+.navbar {
+    height: 70px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+.logo span {
+    color: #9333ea;
+}
+
+.status {
+    color: #16a34a;
+    font-size: 14px;
+}
+
+
+/* Main */
+
+.container {
+    width: 90%;
+    max-width: 950px;
+    margin: 45px auto;
+}
+
+
+/* Card */
+
+.card {
+    background: white;
+    border-radius: 22px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(79, 70, 229, 0.12);
+}
+
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.hero-icon {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    background: #eef2ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+}
+
+.hero h1 {
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #6b7280;
+}
+
+
+/* Category */
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.category {
+    padding: 22px;
+    border: 2px solid #e5e7eb;
+    background: white;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.category:hover {
+    transform: translateY(-4px);
+    border-color: #6366f1;
+}
+
+.category.active {
+    border-color: #6366f1;
+    background: #f5f3ff;
+}
+
+.category strong,
+.category small {
+    display: block;
+    margin-top: 8px;
+}
+
+.category small {
+    color: #6b7280;
+}
+
+
+/* Buttons */
+
+.start-btn,
+.submit-btn,
+.next-btn,
+.restart-btn {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 25px;
+    background: linear-gradient(90deg, #4f46e5, #9333ea);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.start-btn:hover,
+.submit-btn:hover,
+.next-btn:hover,
+.restart-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+
+/* Interview Header */
+
+.interview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.interview-header h2 {
+    margin-top: 5px;
+}
+
+#categoryName {
+    color: #6366f1;
+    font-weight: bold;
+}
+
+
+/* Progress */
+
+.progress-container {
+    width: 180px;
+}
+
+.progress {
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(90deg, #4f46e5, #9333ea);
+}
+
+#progressText {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+
+/* Question */
+
+.question-box {
+    margin-top: 35px;
+    padding: 25px;
+    background: #f5f3ff;
+    border-radius: 16px;
+    display: flex;
+    gap: 18px;
+}
+
+.question-icon {
+    font-size: 28px;
+}
+
+.question-label {
+    color: #7c3aed;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.question-box h2 {
+    margin-top: 8px;
+}
+
+
+/* Speak */
+
+.speak-btn {
+    margin-top: 15px;
+    padding: 10px 16px;
+    border: 1px solid #c7d2fe;
+    background: #eef2ff;
+    color: #4338ca;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* Answer */
+
+.answer-section {
+    margin-top: 30px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 18px;
+    resize: vertical;
+    border: 2px solid #e5e7eb;
+    border-radius: 14px;
+    outline: none;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+textarea:focus {
+    border-color: #6366f1;
+}
+
+
+/* Voice Controls */
+
+.voice-controls {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.mic-btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #4f46e5;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.clear-btn {
+    padding: 14px 25px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.listening-status {
+    color: #dc2626;
+    margin-top: 10px;
+}
+
+
+/* Feedback */
+
+.feedback {
+    margin-top: 30px;
+    padding: 25px;
+    background: #f8fafc;
+    border-radius: 16px;
+}
+
+.scores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.scores div {
+    background: white;
+    padding: 18px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.scores strong {
+    display: block;
+    color: #4f46e5;
+    font-size: 25px;
+}
+
+.scores span {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+
+/* Result */
+
+#resultSection {
+    text-align: center;
+}
+
+.result-icon {
+    font-size: 55px;
+}
+
+.final-score {
+    margin: 30px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #eef2ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.final-score span {
+    font-size: 45px;
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+.final-score small {
+    color: #6b7280;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.result-grid div {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.result-grid strong {
+    display: block;
+    font-size: 25px;
+    color: #4f46e5;
+}
+
+.result-grid span {
+    color: #6b7280;
+}
+
+.recommendation {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f5f3ff;
+    border-radius: 12px;
+    text-align: left;
+}
+
+
+/* Utility */
+
+.hidden {
+    display: none;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #6b7280;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+    .card {
+        padding: 25px;
+    }
+    .category-container {
+        grid-template-columns: 1fr;
+    }
+    .scores {
+        grid-template-columns: 1fr 1fr;
+    }
+    .interview-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .progress-container {
+        width: 100%;
+    }
+}
